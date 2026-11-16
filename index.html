@@ -38,16 +38,31 @@ tw-passage {
     display: block;
     box-sizing: border-box;
     width: 90%;
-    max-width: 900px;
-    margin: 40px auto; /* Отступы сверху и снизу */
-    padding: 40px 60px;
+    max-width: 800px;
+    margin: 20px auto !important; 
+    padding: 30px 40px !important;
     background-color: rgba(22, 27, 34, 0.9);
     border: 1px solid #30363d;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(88, 166, 255, 0.05);
-    font-size: 1.2rem; /* Немного уменьшил шрифт, чтобы текст не был гигантским */
-    line-height: 1.8;
+    font-size: 1.15rem;
+    line-height: 1.7;
     animation: fadeIn 0.8s ease-in;
+}
+
+/* --- УБИРАЕМ ГИГАНТСКИЕ ОТСТУПЫ У ТЕКСТА --- */
+tw-passage p {
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+}
+
+tw-passage br {
+    display: none; /* Убирает лишние переносы строк, если они есть */
+}
+
+tw-passage img {
+    display: block;
+    margin: 0 auto 20px auto; /* Картинка по центру с отступом снизу */
 }
 
 /* --- ЦВЕТА И ШРИФТЫ --- */
@@ -56,6 +71,7 @@ h1, h2, h3 {
     border-bottom: 2px solid #30363d;
     padding-bottom: 10px;
     margin-top: 0;
+    margin-bottom: 15px;
 }
 
 strong {
@@ -72,7 +88,7 @@ tw-link, .enchantment-link {
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
-    margin: 8px 0;
+    margin: 10px 0;
     padding: 8px 16px;
     border: 1px solid #3fb950;
     border-radius: 4px;
@@ -96,14 +112,14 @@ tw-sidebar {
 table.smeta {
     width: 100%;
     border-collapse: collapse;
-    margin: 30px 0;
+    margin: 20px 0;
     background: #161b22;
     border: 1px solid #30363d;
     font-size: 1.1rem;
 }
 
 table.smeta td {
-    padding: 12px 20px;
+    padding: 10px 15px;
     border-bottom: 1px solid #30363d;
 }
 
@@ -124,16 +140,16 @@ table.smeta td:last-child {
 /* --- БЛОКИ ИТОГОВ --- */
 .total-box {
     background: #21262d;
-    padding: 20px;
+    padding: 15px 20px;
     border-left: 4px solid #58a6ff;
     margin: 20px 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
     border-radius: 0 4px 4px 0;
 }
 
 .error-box {
     background: rgba(248, 81, 73, 0.1);
-    padding: 20px;
+    padding: 15px 20px;
     border-left: 4px solid #f85149;
     margin: 20px 0;
     border-radius: 0 4px 4px 0;
@@ -141,7 +157,7 @@ table.smeta td:last-child {
 
 .success-box {
     background: rgba(63, 185, 80, 0.1);
-    padding: 20px;
+    padding: 15px 20px;
     border-left: 4px solid #3fb950;
     margin: 20px 0;
     border-radius: 0 4px 4px 0;
@@ -150,7 +166,7 @@ table.smeta td:last-child {
 /* --- КОНЦОВКИ --- */
 .ending-perfect {
     border: 2px solid #3fb950;
-    padding: 40px;
+    padding: 30px;
     background: rgba(13, 31, 20, 0.8);
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(63, 185, 80, 0.2);
@@ -158,7 +174,7 @@ table.smeta td:last-child {
 
 .ending-ok {
     border: 2px solid #e3b341;
-    padding: 40px;
+    padding: 30px;
     background: rgba(31, 29, 13, 0.8);
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(227, 179, 65, 0.2);
@@ -166,7 +182,7 @@ table.smeta td:last-child {
 
 .ending-fail {
     border: 2px solid #f85149;
-    padding: 40px;
+    padding: 30px;
     background: rgba(31, 13, 13, 0.8);
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(248, 81, 73, 0.2);
@@ -208,19 +224,19 @@ table.smeta td:last-child {
     background: #000;
     border: 1px solid #30363d;
     border-radius: 8px;
-    padding: 40px;
+    padding: 30px;
     text-align: center;
     margin: 20px 0;
     font-family: 'Consolas', monospace;
 }
 
 .boot-logo {
-    font-size: 3em;
+    font-size: 2.5em;
     color: #58a6ff;
     font-weight: bold;
     letter-spacing: 8px;
     animation: pulseLogo 2s ease-in-out infinite;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 @keyframes pulseLogo {
